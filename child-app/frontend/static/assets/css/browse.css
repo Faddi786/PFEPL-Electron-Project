@@ -1,0 +1,431 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --white-color: hsl(0, 0%, 100%);
+  --black-color: hsl(0, 0%, 0%);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Poppins", sans-serif;
+  --h1-font-size: 2rem;
+  --normal-font-size: 1rem;
+  --small-font-size: .813rem;
+  
+  
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body,
+input,
+button {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  color: var(--white-color); /* Ensuring consistent font color */
+}
+
+a {
+  text-decoration: none;
+  color: var(--white-color); /* Ensuring consistent link color */
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== LOGIN & REGISTER ===============*/
+
+.register__box select {
+  width: 100%;
+  background: transparent; /* Set background to transparent */
+  color: var(--white-color);
+  padding-block: 9px;
+
+  border: none;
+  outline: none;
+  font-size: 10px;
+  border-radius: 1rem; /* Add border radius for curved corners */
+
+}
+
+
+
+
+
+
+#drone_name option {
+  color: var(--black-color); /* Set text color of dropdown options to black */
+  font-weight: bold; /* Set font weight to bold */
+  content: "\f3a0"; /* Unicode value for the arrow icon */
+  font-family: "RemixIcons"; /* Specify the icon font family */
+  position: absolute;
+  
+  top: 50%;
+  right: 2rem; /* Adjust this value as needed */
+  transform: translateY(-50%);
+  pointer-events: none; 
+  width: 50%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 100px;
+  padding-right: -100px;
+  padding-right: 2rem; /* Adjust this value as needed */
+  background-color: var(--white-color);
+  border-radius: 9rem;
+  color: var(--black-color);
+  font-weight: 500;
+  cursor: pointer;
+  /* Ensure the icon does not interfere with dropdown interaction */
+   /* Set the color of the arrow icon */
+   background: transparent;
+   opacity: 0;
+   padding-inline: 2rem; /* Adjust this value as needed */
+   background-color: transparent; /* Keep transparent for the option itself */
+   background-color: #f0f0f0; /* Set the desired background color */
+}
+
+
+
+
+
+
+.register__bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: -1; /* Ensure the background stays behind other content */
+}
+
+
+
+/* Increase specificity to ensure the rule takes precedence */
+
+
+.login__title,  
+.register__title {
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 1.25rem;
+  margin-top: -10px;
+}
+
+.login__inputs,
+.register__inputs,
+.login__box,
+.register__box {
+  display: grid;
+  margin-top: -5px;
+}
+
+.login__inputs,
+.register__inputs {
+  row-gap: 15px;
+  
+  
+}
+
+.login__box,
+.register__box {
+  grid-template-columns: 1fr max-content;
+  column-gap: .75rem;
+  align-items: center;
+  border: 2px solid hsla(0, 0%, 100%, .7);
+  padding-inline: 1.25rem;
+  border-radius: 2rem;
+  width: 235px;
+  margin-left: -10px;
+  border: 1.5px solid hsla(0, 0%, 100%, .7);
+  padding-top: -5px;
+}
+
+.custom-select {
+  position: relative;
+  display: inline-block;
+}
+
+.custom-select select {
+  display: none;
+}
+
+.custom-select .select-selected {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.custom-select .select-selected:after {
+  position: absolute;
+  content: '';
+  top: 50%;
+  right: 10px;
+  margin-top: -3px;
+  border-width: 6px;
+  border-style: solid;
+  border-color: white transparent transparent transparent;
+}
+
+.custom-select .select-items div {
+  color: black;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+.custom-select .select-items div:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+.login__input,
+.register__input,
+.login__button,
+.register__button {
+  border: none;
+  outline: none;
+}
+
+.login__input,
+.register__input {
+  width: 100%;
+  background: none;
+  color: var(--white-color);
+  padding-block: 8px;
+  font-size: 10px; /* Decrease the font size to make the text smaller */
+  
+}
+
+.login__input::placeholder,
+.register__input::placeholder {
+  color: var(--white-color);
+}
+
+.login__box i,
+.register__box i {
+  font-size: 1.25rem;
+}
+
+  /* Define a class for transparent background */
+  .transparent-bg {
+    background-color: rgba(255, 255, 255, 0.5); /* Adjust the alpha value (last parameter) for transparency */
+  }
+
+
+.login__button,
+.register__button,
+.generateOptions{
+  width: 240px;
+  padding: 6px;
+  height: 33px;
+  margin-bottom: 1rem;
+  background-color: var(--white-color);
+  border-radius: 2rem;
+  color: var(--black-color);
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 10px; /* Decrease the font size to make the text smaller */
+  margin-left: -10px;
+  margin-top: 9px;
+  margin-bottom: 10px; /* Adjust the margin-bottom value */
+  border: 1px solid hsla(0, 0%, 0%, 0.39);
+
+}
+.generateOptions
+{
+  margin-left: 50px;
+}
+
+#countInput{
+ 
+  padding: 6px;
+  height: 33px;
+  margin-bottom: 1rem;
+  background-color: var(--white-color);
+  border-radius: 2rem;
+  color: var(--black-color);
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 10px; /* Decrease the font size to make the text smaller */
+
+  margin-top: 9px;
+  margin-bottom: 10px; /* Adjust the margin-bottom value */
+  border: 1px solid hsla(0, 0%, 0%, 0.39);
+
+}
+
+.count-label {
+  padding: 6px;
+  height: 33px;
+  margin-bottom: 1rem;
+
+  border-radius: 10px;
+
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 15px; /* Decrease the font size to make the text smaller */
+
+  margin-top: 9px;
+  margin-bottom: 10px; /* Adjust the margin-bottom value */
+
+}
+
+.dynamic-button {
+  background-color: blue;
+  color: white;
+  /* Add more styles as needed */
+}
+
+#outputBox {
+width: 240px;
+height: 33px;
+margin-top: -100px;
+margin-left: -10px;
+padding-top: -1000px;
+margin-top: -500px; /* Adjust the margin-top value */
+background-color: var(--white-color);
+border-radius: 1rem;
+color: var(--black-color);
+font-weight: bold;
+cursor: pointer;
+color: rgba(0, 0, 0, 0); /* Set font color to fully transparent black */
+text-align: center; /* Ensure text starts from the left */
+word-wrap: break-word; /* Ensure words break when reaching the border */
+border: 5px solid hsla(0, 2%, 16%, 0);
+opacity: 65%; /* Set background to transparent */
+border: 1.5px solid hsla(0, 0%, 0%, 0.701);
+font-size: 9px;
+ /* Add padding to the text from the left */
+}
+.login__box i,
+.register__box i {
+  font-size: 1rem; /* Decrease the font size of the icon */
+}
+
+.main-container {
+
+      
+  justify-content: space-between; /* Space items evenly */
+  max-width: 1000px; /* Adjust this value as needed */
+  margin: 0 auto;
+
+
+    
+ }
+
+ .generate_browse {
+    position: absolute; /* Position the form absolutely */
+width: 600PX;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-top: 100px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: hsla(0, 0%, 100%, .01);
+    padding: 2.5rem 1rem;
+    color: var(--white-color);
+    border-radius: 1rem;
+    backdrop-filter: blur(16px);
+    margin-left: 600px;
+      
+ }
+
+ .browse-path-input{
+width: 440px;
+padding: 6px;
+height: 33px;
+margin-bottom: 1rem;
+background-color: var(--white-color);
+border-radius: 2rem;
+color: var(--black-color);
+font-weight: 500;
+cursor: pointer;
+font-size: 10px; /* Decrease the font size to make the text smaller */
+
+margin-top: 9px;
+margin-bottom: 10px; /* Adjust the margin-bottom value */
+border: 1px solid hsla(0, 0%, 0%, 0.39);
+
+}
+.browse-label{
+width: 240px;
+padding: 6px;
+
+height: 33px;
+margin-bottom: 1rem;
+background-color: var(--white-color);
+border-radius: 2rem;
+color: var(--black-color);
+font-weight: 500;
+cursor: pointer;
+font-size: 10px; /* Decrease the font size to make the text smaller */
+ margin-right: 10px;
+margin-top: 10px;
+margin-bottom: 10px; /* Adjust the margin-bottom value */
+border: 1px solid hsla(0, 0%, 0%, 0.39);
+
+}
+
+     /* Style the number input */
+     #countInput {
+      color: black; /* Set text color to black */
+      /* Add more styles as needed */
+  }
+
+  /* Style the number input's arrow buttons */
+  #countInput::-webkit-inner-spin-button,
+  #countInput::-webkit-outer-spin-button {
+
+      color: black; /* Set arrow color to black */
+      /* Add more styles as needed */
+  }
+  
+.register__form {
+
+  position: absolute; /* Position the form absolutely */
+
+  display: grid;
+align-items: center;
+  
+margin-top: 200px;
+  margin-left: 100px;
+  margin-inline: 1.5rem;
+background-color: hsla(0, 0%, 100%, .01);
+border: 1.5px solid hsla(0, 0%, 100%, .7);
+padding: 2.5rem 1rem;
+color: var(--white-color);
+border-radius: 1rem;
+backdrop-filter: blur(16px);
+
+width: 300px;
+padding-inline: 2.5rem;
+padding-bottom: 50px;
+}
+/*=============== BREAKPOINTS ===============*/
+/* For medium devices */
+@media screen and (min-width: 576px) {
+  .login{
+    justify-content: center;
+    padding-top: 40px;
+  }
+
+  .login__title,
+  .register__title {
+    margin-bottom: 2rem;
+  }
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!--=============== REMIXICONS ===============-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
+
+   <!--=============== CSS ===============-->
+   <link rel="stylesheet" href="frontend/static/assets/css/register.css">
+
+   <title>Register Account</title>
+   <style>
+      .error-message {
+         color: rgb(255, 119, 0);
+         font-size: 8px;
+         margin-top: 6px;
+         position: absolute;
+         right: 0;
+         top: calc(100% + 40px); /* Adjust the value as needed */
+         transform: translateY(-200%);
+         font-weight: bold; /* Adjust font weight here */
+      }
+
+      .register__box {
+         position: relative;
+      }
+
+      /* Hide the video and form initially */
+      .register__bg, .register__form {
+         display: none;
+      }
+      
+      #video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ensures the video fills the entire container */
+      z-index: -1; /* Ensures the video is behind other content */
+      }
+
+
+   </style>
+</head>
+<body>
+   <video id="video-background" autoplay muted>
+      <source src="frontend/static/assets/video/logo6.mp4" type="video/mp4">
+      <!-- Add more <source> elements for other video formats if necessary -->
+      Your browser does not support the video tag.
+   </video>
+
+   <div class="register">
+      <img src="frontend/static/assets/img/drone11.jpg" alt="image" class="register__bg">
+
+      <form id="registerForm" class="register__form">
+         <h1 class="register__title">Register Account</h1>
+
+         <div class="register__inputs">
+            <div class="register__box">
+               <input type="text" id="nameInput" placeholder="Name of Drone Pilot" required class="register__input">
+               <i class="ri-user-fill"></i>
+            </div>
+
+            <div class="register__box">
+               <input type="text" id="idInput" placeholder="ID" required pattern="[A-Z]{4}" title="ID must be 4 uppercase letters" maxlength="4" class="register__input">
+               <i class="ri-mail-fill"></i>
+               <span id="idErrorMessage" class="error-message"></span>
+            </div>
+
+            <div class="register__box">
+               <input type="password" id="passwordInput" placeholder="Password" required pattern="\d{4}" title="Password must be 4 numbers" maxlength="4" class="register__input">
+               <i class="ri-lock-2-fill"></i>
+               <span id="passwordErrorMessage" class="error-message"></span>
+            </div>
+
+            <div class="register__box">
+               <input type="email" id="emailInput" placeholder="Receiver Email" required class="register__input">
+               <i class="ri-mail-fill"></i>
+               <span id="emailErrorMessage" class="error-message"></span>
+            </div>
+         </div>
+         <input type="text" id="outputBox" class="outputBox" style="margin-top: 10px; color: rgb(255, 0, 0);" readonly> <!-- Change to input type text box -->    
+
+         <button type="button" id="submitButton" class="register__button" onclick="validateRegister()">Create Account</button>
+         
+         <!-- Close button -->
+         <button id="close__button" onclick="closeWindow()" style="margin-top: 10px;">Close</button>
+         
+      </form>
+   </div>
+
+   <script>
+      document.addEventListener("DOMContentLoaded", function() {
+         // Get the video element
+         var video = document.getElementById('video-background');
+         // When the video ends, display the video and form
+         video.addEventListener('ended', function() {
+            // Display the video and form
+            document.getElementById('video-background').style.display = 'none';
+            document.querySelector('.register__bg').style.display = 'block';
+            document.querySelector('.register__form').style.display = 'block';
+         });
+      });
+   </script>
+
+<script src="renderer.js"></script>
+
+</body>
+</html>

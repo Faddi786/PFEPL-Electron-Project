@@ -1,0 +1,45 @@
+{
+  "name": "my-electron-app",
+  "version": "1.0.0",
+  "description": "Description of your app",
+  "productName": "my-electron-app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "package-windows": "electron-builder --win",
+    "dist": "electron-builder --win"
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.7",
+    "rcedit": "^4.0.1"
+  },
+  "devDependencies": {
+    "electron": "^28.2.5",
+    "electron-builder": "^24.13.3",
+    "electron-packager": "^17.1.2"
+  },
+  "build": {
+    "directories": {
+      "output": "../Electron-apps/Name/dist"
+    },
+    "extraResources": [
+      {
+        "from": "f.py",
+        "to": "."
+      },
+      {
+        "from": "run_app.bat",
+        "to": "../../run_app.bat"
+      },
+      {
+        "from": "f.exe",
+        "to": "."
+      }
+    ],
+    "win": {
+      "target": "nsis"
+    }
+  }
+}

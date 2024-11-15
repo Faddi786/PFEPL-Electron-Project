@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!--=============== REMIXICONS ===============-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
+
+   <!--=============== CSS ===============-->
+   <link rel="stylesheet" href="frontend/static/assets/css/browse.css">
+
+   <title>Browse</title>
+
+</head>
+
+<body>
+
+<div class="main-container">
+   <div class="generate_browse">
+      <label for="countInput" class="count-label">Count:</label>
+      <input type="number" id="countInput" min="1" max="10" value="1">
+      <button class= "generateOptions" id="generateOptions">Generate Browse Options</button>
+      
+      <div id="browseOptions"></div>
+      
+      <script src="scriptt.js"></script>
+     
+  </div>
+
+   <div class="register">
+      <img src="frontend/static/assets/img/drone2.png" alt="image" class="register__bg">
+
+      <form id="registerForm" class="register__form">
+         <h1 class="register__title">Enter Details</h1>
+
+         <div class="register__inputs">
+
+
+            <div class="register__box">
+               <select id="drone_name" required class="register__input">
+                 <option value="" disabled selected>Select Drone Name</option>
+                 <option value="Q6">Q6</option>
+                 <option value="Netra">Netra</option>
+                 <option value="Ryno">Ryno</option>
+                 <option value="Sigma">Sigma</option>
+                 <option value="Edall">Edall</option>
+                 <option value="Snap-M">Snap-M</option>
+                 <option value="Striver">Striver</option>
+                 <option value="Talon">Talon</option>
+                 <option value="Impulse">Impulse</option>
+               </select>
+               <i class="ri-aircraft-line"></i> <!-- Aircraft icon -->
+            </div>
+
+            <div class="register__box">
+               <input type="text" id="site_name" placeholder="Site Name"  class="register__input">
+               <i class="ri-building-4-line"></i>
+            </div>
+
+
+         </div>
+
+         <button type="button" id="run_application" class="register__button">Run Application</button>
+         <input type="text" id="outputBox" style="margin-top: 10px; color: green;" readonly> <!-- Change to input type text box -->
+      </form>
+   </div>
+</div>
+   <script src="renderer.js"></script>
+</body>
+</html>
+
+

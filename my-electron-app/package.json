@@ -1,0 +1,29 @@
+{
+  "name": "my-electron-app",
+  "version": "1.0.0",
+  "description": "Description of your app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron . --user-data-dir=C:\\temp\\electron-profile",
+    "prebuild": "python C:/Users/Lenovo/Downloads/Fahad-main/my-electron-app/backend/create_app.py",
+    "package-windows": "electron-builder --win",
+    "build": "npm run prebuild && electron-builder --win",
+    "dist": "electron-builder --win"
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.7",
+    "rcedit": "^4.0.1"
+  },
+  "devDependencies": {
+    "electron": "^28.2.4",
+    "electron-builder": "^24.13.3",
+    "electron-packager": "^17.1.2"
+  },
+  "build": {
+    "files": [
+      "**/*"
+    ]
+  }
+}

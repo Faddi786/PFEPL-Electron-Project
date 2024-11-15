@@ -1,0 +1,218 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --white-color: hsl(0, 0%, 100%);
+  --black-color: hsl(0, 0%, 0%);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Poppins", sans-serif;
+  --h1-font-size: 2rem;
+  --normal-font-size: 1rem;
+  --small-font-size: .813rem;
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body,
+input,
+button {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  color: var(--white-color); /* Ensuring consistent font color */
+}
+
+a {
+  text-decoration: none;
+  color: var(--white-color); /* Ensuring consistent link color */
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== LOGIN & REGISTER ===============*/
+.login,
+.register {
+  position: relative;
+  height: 100vh;
+  display: grid;
+  align-items: center;
+}
+
+.login__bg,
+.register__bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.login__form,
+.register__form {
+  position: relative;
+  margin-inline: 1.5rem;
+  background-color: hsla(0, 0%, 100%, .01);
+  border: 1.5px solid hsla(0, 0%, 100%, 0.71);
+  padding-left: 25px;
+  padding-right: 25px;
+  color: var(--white-color);
+  border-radius: 1rem;
+  backdrop-filter: blur(16px);
+  
+}
+
+.login__title,
+.register__title {
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 25px;
+}
+
+.login__inputs,
+.register__inputs,
+.login__box,
+.register__box {
+  display: grid;
+}
+
+.login__inputs,
+.register__inputs {
+  row-gap: 10px;
+  
+}
+
+.login__box,
+.register__box{
+  grid-template-columns: 1fr max-content;
+  column-gap: .75rem;
+  align-items: center;
+  border: 1.5px solid hsla(0, 0%, 100%, .7);
+  padding-inline: 1.25rem;
+  border-radius: 4rem;
+  
+}
+
+
+
+.login__input,
+.register__input,
+.login__button,
+.register__button {
+  border: none;
+  outline: none;
+  position: relative; /* Set position to relative */
+}
+
+.login__input,
+.register__input {
+  width: 100%;
+  background: none;
+  color: var(--white-color);
+  padding-block: 5px;
+  font-size: 11px;
+}
+
+.login__input::placeholder,
+.register__input::placeholder {
+  color: var(--white-color);
+}
+
+.login__box i,
+.register__box i {
+  font-size: 17px;
+}
+
+.register__form {
+  position: relative; /* Set parent container to relative positioning */
+}
+
+.register__button {
+  
+  width: 248px;
+  height:30px;
+
+  
+  background-color: var(--white-color);
+  border-radius: 4rem;
+  color: var(--black-color);
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 11px;
+  border: 2px solid hsla(0, 0%, 100%, .7);
+}
+
+#outputBox {
+  width: 250px;
+  height: 30px;
+  margin-top: -900px;
+  margin-left: px;
+  padding-top: -1000px;
+  margin-top: -500px; /* Adjust the margin-top value */
+  background-color: var(--white-color); 
+  border-radius: 1.5rem;
+  color: var(--black-color);
+  font-weight: bold;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0); /* Set font color to fully transparent black */
+  text-align: center; /* Ensure text starts from the left */
+  word-wrap: break-word; /* Ensure words break when reaching the border */
+  border: 5px solid hsla(0, 2%, 16%, 0);
+  opacity: 65%; /* Set background to transparent */
+  border: 1.5px solid hsla(0, 0%, 0%, 0.701);
+  font-size: 10px;
+   /* Add padding to the text from the left */
+}
+
+#close__button {
+  width: 248px;
+  height:30px;
+  
+  background-color: var(--white-color);
+  border-radius: 4rem;
+  color: var(--black-color);
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 12px;
+  border: 2px solid hsl(0, 0%, 100%);
+  left: 100px;
+
+}
+
+
+
+
+
+
+/*=============== BREAKPOINTS ===============*/
+/* For medium devices */
+@media screen and (min-width: 200px) {
+  .login,
+  .register {
+    justify-content: center;
+  }
+  .login__form,
+  .register__form {
+    padding-top: 35px;
+    height: 400px;
+    width: 300px;
+    
+  }
+  .login__title,
+  .register__title {
+    
+  }
+}

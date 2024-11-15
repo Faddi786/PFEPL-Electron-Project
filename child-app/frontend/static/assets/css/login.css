@@ -1,0 +1,218 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --white-color: hsl(0, 0%, 100%);
+  --black-color: hsl(0, 0%, 0%);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Poppins", sans-serif;
+  --h1-font-size: 2rem;
+  --normal-font-size: 1rem;
+  --small-font-size: .813rem;
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body,
+input,
+button {
+  font-family: var(--body-font);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== LOGIN ===============*/
+.login {
+  position: relative;
+  height: 100vh;
+  display: grid;
+  align-items: center;
+}
+
+.login__bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.login__form {
+  position: relative;
+  margin-inline: 1.5rem;
+  background-color: hsla(0, 0%, 100%, .01);
+  border: 2px solid hsla(0, 0%, 100%, .7);
+  padding: 2.5rem 1.5rem 5rem 1.5rem; /* Increase padding only from the bottom */
+  color: var(--white-color);
+  border-radius: 1rem;
+  backdrop-filter: blur(16px);
+}
+
+
+.login__title {
+  text-align: center;
+  font-size: 30px;
+  
+}
+
+.login__inputs, 
+.login__box,
+.errorMessage {
+  display: grid;
+}
+
+.login__inputs,
+.errorMessage {
+  row-gap: 12px;
+  margin-bottom: 12px;
+  font-size: 155px;
+}
+
+.login__box {
+  grid-template-columns: 1fr max-content;
+  height: 40px;
+  align-items: center;
+  border: 2px solid hsla(0, 0%, 100%, .7);
+  padding-inline: 1.25rem;
+  border-radius: 4rem;
+}
+
+.login__input, 
+.login__button,
+.errorMessage {
+  border: none;
+  outline: none;
+}
+
+.login__input,
+.errorMessage {
+  width: 100%;
+  background: none;
+  color: var(--white-color);
+  
+}
+
+.login__input::placeholder,
+.errorMessage {
+  color: var(--white-color);
+}
+
+.login__box i,
+.errorMessage{
+  font-size: 1.25rem;
+}
+
+.login__check, 
+.login__check-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.login__check {
+  margin-bottom: 1rem;
+}
+
+.login__check-box {
+  column-gap: .5rem;
+}
+
+.login__check-input {
+  width: 15rem;
+  height: 1rem;
+  accent-color: var(--white-color);
+}
+
+.login__forgot {
+  color: var(--white-color);
+}
+
+.login__forgot:hover {
+  text-decoration: underline;
+}
+
+.errorMessage {
+  margin-top: 10px;
+  text-align: center;
+}
+
+#outputBox {
+  width: 288px;
+  height: 40px;
+
+  margin-left: px;
+
+  background-color: var(--white-color); 
+  border-radius: 1.5rem;
+  color: var(--black-color);
+  font-weight: bold;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0); /* Set font color to fully transparent black */
+  text-align: center; /* Ensure text starts from the left */
+  word-wrap: break-word; /* Ensure words break when reaching the border */
+  border: 5px solid hsla(0, 2%, 16%, 0);
+  opacity: 65%; /* Set background to transparent */
+  border: 1.5px solid hsla(0, 0%, 0%, 0.701);
+  font-size: 13px;
+   /* Add padding to the text from the left */
+}
+
+.login__button {
+  width: 100%;
+  height: 35px;
+  
+  background-color: var(--white-color);
+  border-radius: 4rem;
+  color: var(--black-color);
+  font-weight: 500;
+  cursor: pointer;
+  
+}
+
+
+.login__register {
+  text-align: center;
+}
+
+.login__register a {
+  color: var(--white-color);
+  font-weight: 500;
+}
+
+.login__register a:hover {
+  text-decoration: underline;
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For medium devices */
+@media screen and (min-width: 576px) {
+  .login {
+    justify-content: center;
+  }
+  .login__form {
+    width: 370px;
+    padding-inline: 2.5rem;
+    height: 350px;
+  }
+  .login__title {
+    margin-bottom: 20px;
+  }
+}
