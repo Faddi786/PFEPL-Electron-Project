@@ -45,14 +45,14 @@ def send_email_with_attachment(subject, body, recipients, cc_recipients, attachm
             server.starttls()
             # Login to your email account
             try:
-                server.login('extrashaikh786@gmail.com', 'rxjvxznjewruuxbf')  # Replace with your email and password
+                server.login('', '')  # Replace with your email and password
             except smtplib.SMTPAuthenticationError:
                 print("Authentication failed. Check your email and password.")
                 return
             # Send email
             recipients_with_cc = recipients + cc_recipients
             try:
-                server.sendmail('extrashaikh786@gmail.com', recipients_with_cc, msg.as_string())
+                server.sendmail('', recipients_with_cc, msg.as_string())
                 print("\033[92mEmail sent successfully to {}\033[0m with \033[92mCC to {}\033[0m".format(", ".join(recipients), ", ".join(cc_recipients)))
                 print("\033[92mProgram has been successfully ran, Congratulations\033[0m")
                 os.remove(attachment_path)
