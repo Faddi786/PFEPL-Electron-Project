@@ -37,7 +37,7 @@ def run_npm_and_save_to_file():
         print("Data saved to file:", file_path2)
         
         # Execute the npm command
-        npm_path = r'C:\Program Files\nodejs\npm.cmd'  # Use the path to npm here
+        npm_path = r''  # Use the path to npm here
         subprocess.run([npm_path, 'run', 'package-windows'], cwd=directory_path, check=True)
         print("npm command executed successfully.")
         
