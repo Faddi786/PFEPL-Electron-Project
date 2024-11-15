@@ -82,39 +82,3 @@ def user_pdf(pdf_data):
     # Output PDF
     pdf.output('report.pdf')
 
-# Example usage
-pdf_data = {
-    "Gen Page Data": {
-        "totalsum_dict": {"Total Pass": 19, "Total Fail": 4, "Total Image Count": 23, "Overall Fail Percentage": 17.39},
-        "processdetails_dict": {"Pilot Name": "John Doe", "Timestamp": "2024-07-31 16:31:03", "Drone Name": "Talon", "Site Name": "Site A", "Flight Count": 2}
-    },
-    "All folders data": {
-        "folder_1": {
-            "summary_dict": {"Pass": 11, "Fail": 1, "Fail Percentage": 8.33, "Count": 12, "Folder Path": "Path1"},
-            "user_df": pd.DataFrame({'Serial No': [1, 2], 'Image Name': ['Image1', 'Image2'], 'Exposure Time': ['1/100', '1/200'], 'Exposure Bias': [0, 0], 'Exposure Program': ['Program1', 'Program2'], 'ISO Speed': [100, 200], 'F-stop': [2.8, 3.5], 'Failing Factor': ['False', 'True']}),
-            "man_df": pd.DataFrame({'Criteria for Failure': ['ISO Speed', '-'], 'Expected Value': ['50-600', '-'], 'Actual Value': ['1000', '-'], 'Fail Image': ['Image1', '-'], 'Folder Path': ['Path1', '-'], 'Pass Image': ['Image2', '-']})
-        },
-        "folder_2": {
-            "summary_dict": {"Pass": 11, "Fail": 1, "Fail Percentage": 8.33, "Count": 12, "Folder Path": "Path1"},
-            "user_df": pd.DataFrame({'Serial No': [1, 2], 'Image Name': ['Image1', 'Image2'], 'Exposure Time': ['1/100', '1/200'], 'Exposure Bias': [0, 0], 'Exposure Program': ['Program1', 'Program2'], 'ISO Speed': [100, 200], 'F-stop': [2.8, 3.5], 'Failing Factor': ['False', 'True']}),
-            "man_df": pd.DataFrame({'Criteria for Failure': ['ISO Speed', '-'], 'Expected Value': ['50-600', '-'], 'Actual Value': ['1000', '-'], 'Fail Image': ['Image1', '-'], 'Folder Path': ['Path1', '-'], 'Pass Image': ['Image2', '-']})
-        },
-        "folder_3": {
-            "summary_dict": {"Pass": 11, "Fail": 1, "Fail Percentage": 8.33, "Count": 12, "Folder Path": "Path1"},
-            "user_df": pd.DataFrame({'Serial No': [1, 2], 'Image Name': ['Image1', 'Image2'], 'Exposure Time': ['1/100', '1/200'], 'Exposure Bias': [0, 0], 'Exposure Program': ['Program1', 'Program2'], 'ISO Speed': [100, 200], 'F-stop': [2.8, 3.5], 'Failing Factor': ['False', 'True']}),
-            "man_df": pd.DataFrame({'Criteria for Failure': ['ISO Speed', '-'], 'Expected Value': ['50-600', '-'], 'Actual Value': ['1000', '-'], 'Fail Image': ['Image1', '-'], 'Folder Path': ['Path1', '-'], 'Pass Image': ['Image2', '-']})
-        },
-        "folder_4": {
-            "summary_dict": {"Pass": 11, "Fail": 1, "Fail Percentage": 8.33, "Count": 12, "Folder Path": "Path1"},
-            "user_df": pd.DataFrame({'Serial No': [1, 2], 'Image Name': ['Image1', 'Image2'], 'Exposure Time': ['1/100', '1/200'], 'Exposure Bias': [0, 0], 'Exposure Program': ['Program1', 'Program2'], 'ISO Speed': [100, 200], 'F-stop': [2.8, 3.5], 'Failing Factor': ['False', 'True']}),
-            "man_df": pd.DataFrame({'Criteria for Failure': ['ISO Speed', '-'], 'Expected Value': ['50-600', '-'], 'Actual Value': ['1000', '-'], 'Fail Image': ['Image1', '-'], 'Folder Path': ['Path1', '-'], 'Pass Image': ['Image2', '-']})
-        },
-        "folder_5": {
-            "summary_dict": {"Pass": 11, "Fail": 1, "Fail Percentage": 8.33, "Count": 12, "Folder Path": "Path1"},
-            "user_df": pd.DataFrame({'Serial No': [1, 2], 'Image Name': ['Image1', 'Image2'], 'Exposure Time': ['1/100', '1/200'], 'Exposure Bias': [0, 0], 'Exposure Program': ['Program1', 'Program2'], 'ISO Speed': [100, 200], 'F-stop': [2.8, 3.5], 'Failing Factor': ['False', 'True']}),
-            "man_df": pd.DataFrame({'Criteria for Failure': ['ISO Speed', '-'], 'Expected Value': ['50-600', '-'], 'Actual Value': ['1000', '-'], 'Fail Image': ['Image1', '-'], 'Folder Path': ['Path1', '-'], 'Pass Image': ['Image2', '-']})
-        }
-    }
-}
-
-user_pdf(pdf_data)
