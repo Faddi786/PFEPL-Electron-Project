@@ -373,8 +373,7 @@ if __name__ == "__main__":
 
     # Example folder paths (replace with actual paths)
     folder_paths = [
-        r"C:\Users\Fahad\Desktop\Current Software\Electron\Images\Talon",
-        r"C:\Users\Fahad\Desktop\Current Software\Electron\Images\Striver"
+
     ]
 
     # Example usage:
