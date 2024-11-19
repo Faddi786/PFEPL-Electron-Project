@@ -55,17 +55,29 @@ Web-Based Dashboard (Planned for Version 2)
 ________________________________________
 Technical Details
 1.	Offline Functionality:
+   
     •	Electron-based apps operate offline, ensuring compatibility with local file systems for direct access to images.
-2.	Two-Level Architecture:
+  
+3.	Two-Level Architecture:
+   
     •	Parent App: Generates child app installers and manages pilot accounts.
+
     •	Child App: Installed by pilots for analyzing images on their local systems.
-3.	Image Metadata Analysis:
+  
+5.	Image Metadata Analysis:
+   
     •	Extracts metadata such as ISO, shutter speed, aperture, etc.
+
     •	Compares values against predefined standards to determine pass/fail status.
-4.	Technology Stack:
+  
+7.	Technology Stack:
+   
     •	Electron Framework: JavaScript-based framework for cross-platform desktop apps.
+
     •	Python Backend: For metadata extraction and analysis.
+
     •	HTML/CSS/JS: For GUI development.
+  	
 ________________________________________
 Workflow
 
@@ -85,7 +97,7 @@ Workflow
 
     •	Generate: PDF report for the pilot and Back office statistics with sample images.
 
-5.	Web Dashboard (Version 2):
+3.	Web Dashboard (Version 2):
 
     •	Access data from all child app analyses.
 
@@ -94,19 +106,6 @@ ________________________________________
 Requirements: 
 •	Node.js
 •   Python and itspackages 
-________________________________________
-Benefits
-
-•	Ensures compliance with camera configuration standards during drone surveys.
-
-•	Automates metadata analysis, reducing manual effort.
-
-•	Provides actionable insights to both pilots and the drone operations team.
-
-•	Enhances back-office review with detailed statistics and sample image analysis.
-
-•	Offline functionality ensures compatibility in fieldwork scenarios.
-
 ________________________________________
 Future Enhancements (Version 2):
 
