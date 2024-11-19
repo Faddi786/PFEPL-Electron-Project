@@ -34,9 +34,9 @@ Technology Stack:
 
 Requirements:
 
-Node.js
+• Node.js
 
-Python and its packages 
+• Python and its packages 
 
 ________________________________________
 Features and Workflow
