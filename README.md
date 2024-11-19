@@ -21,7 +21,9 @@ The tool operates as a two-level architecture:
 Previously, only statistical summaries (pass/fail counts) were sent to managers and department heads. However, the drone department requested enhancements, Provide access to random samples of pass and fail images for each flight.
 
 To achieve this, the system consists of:
+
 •	Desktop Applications for image metadata analysis (offline functionality).
+
 •	A planned web-based platform to centralize and enhance data visualization and access.
 ________________________________________
 Features
@@ -39,11 +41,17 @@ Back Office Statistics: Summarized data (e.g., total images, pass/fail counts).
 Sample Images: Randomly selected 5 pass and 5 fail images for quality review.
 ________________________________________
 Web-Based Dashboard (Planned for Version 2)
+
 •	Enables drone operations employees to log in and access detailed analysis data.
+
 •	Features:
+
 •	View metadata analysis statistics.
+
 •	Display random sample images for pass/fail categories.
+
 •	Store and organize historical analysis data for tracking and review.
+
 ________________________________________
 Technical Details
 1.	Offline Functionality:
@@ -75,11 +83,7 @@ Workflow
 
     •	Perform metadata analysis.
 
-    •	Generate:
-
-PDF report for the pilot.
-
-Back office statistics with sample images.
+    •	Generate: PDF report for the pilot and Back office statistics with sample images.
 
 5.	Web Dashboard (Version 2):
 
@@ -87,7 +91,7 @@ Back office statistics with sample images.
 
     •	View summary statistics, historical data, and sample images for each survey.
 ________________________________________
-Requirements
+Requirements: 
 •	Node.js
 •   Python and itspackages 
 ________________________________________
@@ -104,8 +108,11 @@ Benefits
 •	Offline functionality ensures compatibility in fieldwork scenarios.
 
 ________________________________________
-Future Enhancements (Version 2)
+Future Enhancements (Version 2):
+
 •	Web Dashboard: To centralize and visualize data for the drone department team.
+
 •	Improved Reporting: Interactive charts and graphs for better insights.
+
 This project simplifies and standardizes the critical task of image metadata analysis for drone surveys, paving the way for improved operational efficiency and data quality.
 
