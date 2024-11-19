@@ -8,6 +8,7 @@ Overview
 This project addresses the challenge of ensuring compliance with drone camera configuration standards during large-scale drone surveys. The tool verifies and analyzes image metadata, helping pilots and the drone operations team maintain quality control. The system includes both an Electron-based desktop application (parent and child apps) and a planned web-based dashboard for comprehensive monitoring and analysis.
 ________________________________________
 Problem Statement
+
 Drone surveys, which involve capturing thousands of images per session for orthophoto generation, require precise camera configurations to ensure quality. However, pilots sometimes forget to set these configurations correctly, or camera systems automatically adjust settings like ISO, leading to deviations from standard values.
 To tackle this, we created an image metadata analysis tool that:
 1.	Analyzes image metadata from the drone survey images.
@@ -19,7 +20,9 @@ The tool operates as a two-level architecture:
 2.	Child App: Used by pilots for image analysis.
 Previously, only statistical summaries (pass/fail counts) were sent to managers and department heads. However, the drone department requested enhancements, Provide access to random samples of pass and fail images for each flight.
 To achieve this, the system consists of:
+
 •	Desktop Applications for image metadata analysis (offline functionality).
+
 •	A planned web-based platform to centralize and enhance data visualization and access.
 ________________________________________
 Features
