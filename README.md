@@ -2,7 +2,9 @@
 
 
 Drone Survey Image Metadata Analysis System
+
 Overview
+
 This project addresses the challenge of ensuring compliance with drone camera configuration standards during large-scale drone surveys. The tool verifies and analyzes image metadata, helping pilots and the drone operations team maintain quality control. The system includes both an Electron-based desktop application (parent and child apps) and a planned web-based dashboard for comprehensive monitoring and analysis.
 ________________________________________
 Problem Statement
