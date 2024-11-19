@@ -26,11 +26,11 @@ Technical Details
    
 Technology Stack:
    
-    •	Electron Framework: JavaScript-based framework for cross-platform desktop apps.
+•	Electron Framework: JavaScript-based framework for cross-platform desktop apps.
 
-    •	Python Backend: For metadata extraction and analysis.
+•	Python Backend: For metadata extraction and analysis.
 
-    •	HTML/CSS/JS: For GUI development.
+•	HTML/CSS/JS: For GUI development.
 
 Requirements:
 
