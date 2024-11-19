@@ -83,9 +83,9 @@ Back office statistics with sample images.
 
 5.	Web Dashboard (Version 2):
 
-•	Access data from all child app analyses.
+    •	Access data from all child app analyses.
 
-•	View summary statistics, historical data, and sample images for each survey.
+    •	View summary statistics, historical data, and sample images for each survey.
 ________________________________________
 Requirements
 •	Nothing
