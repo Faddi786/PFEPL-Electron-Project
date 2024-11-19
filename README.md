@@ -19,57 +19,9 @@ The tool operates as a two-level architecture:
 1.	Parent App: Used by drone department heads to create child apps for pilots.
 2.	Child App: Used by pilots for image analysis.
 Previously, only statistical summaries (pass/fail counts) were sent to managers and department heads. However, the drone department requested enhancements, Provide access to random samples of pass and fail images for each flight.
-
-To achieve this, the system consists of:
-
-•	Desktop Applications for image metadata analysis (offline functionality).
-
-•	A planned web-based platform to centralize and enhance data visualization and access.
-________________________________________
-Features
-Desktop Applications (Electron Framework)
-1.	Parent App (Drone Operations HQ):
-Allows drone department heads to register users (pilots) with details like ID, password, and email.
-Generates a Child App installer to send to the pilots via email.
-2.	Child App (For Pilots):
-Login to access the tool.
-Input the folder containing images captured during the drone survey.
-Analyzes image metadata for compliance with specified camera configurations.
-Provides:
-PDF Report: A detailed document with analysis results for the pilot.
-Back Office Statistics: Summarized data (e.g., total images, pass/fail counts).
-Sample Images: Randomly selected 5 pass and 5 fail images for quality review.
-________________________________________
-Web-Based Dashboard (Planned for Version 2)
-
-•	Enables drone operations employees to log in and access detailed analysis data.
-
-•	Features:
-
-•	View metadata analysis statistics.
-
-•	Display random sample images for pass/fail categories.
-
-•	Store and organize historical analysis data for tracking and review.
-
 ________________________________________
 Technical Details
-1.	Offline Functionality:
    
-    •	Electron-based apps operate offline, ensuring compatibility with local file systems for direct access to images.
-  
-3.	Two-Level Architecture:
-   
-    •	Parent App: Generates child app installers and manages pilot accounts.
-
-    •	Child App: Installed by pilots for analyzing images on their local systems.
-  
-5.	Image Metadata Analysis:
-   
-    •	Extracts metadata such as ISO, shutter speed, aperture, etc.
-
-    •	Compares values against predefined standards to determine pass/fail status.
-  
 7.	Technology Stack:
    
     •	Electron Framework: JavaScript-based framework for cross-platform desktop apps.
@@ -77,9 +29,23 @@ Technical Details
     •	Python Backend: For metadata extraction and analysis.
 
     •	HTML/CSS/JS: For GUI development.
+
+Requirements
+•	Node.js
+•   Python and itspackages 
+
   	
 ________________________________________
 Workflow
+Two-Level Architecture:
+   
+    •	Parent App: Generates child app installers and manages pilot accounts.
+
+    •	Child App: Installed by pilots for analyzing images on their local systems.
+
+1.	Offline Functionality:
+   
+    •	Electron-based apps operate offline, ensuring compatibility with local file systems for direct access to images.
 
 1.	Parent App Workflow:
 
@@ -94,24 +60,23 @@ Workflow
     •	Login and input the folder path of drone survey images.
 
     •	Perform metadata analysis.
+    •	Extracts metadata such as ISO, shutter speed, aperture, etc.
 
-    •	Generate: PDF report for the pilot and Back office statistics with sample images.
+    •	Compares values against predefined standards to determine pass/fail status.
+
+
+    •	Automatically generate PDF report for the pilot 
 
 3.	Web Dashboard (Version 2):
 
     •	Access data from all child app analyses.
 
     •	View summary statistics, historical data, and sample images for each survey.
-________________________________________
-Requirements: 
-•	Node.js
-•   Python and itspackages 
-________________________________________
-Future Enhancements (Version 2):
-
-•	Web Dashboard: To centralize and visualize data for the drone department team.
+							
+•	Centralize and visualize data for the drone department team.
 
 •	Improved Reporting: Interactive charts and graphs for better insights.
+•	Update drone camera configurations dynamically by requesting data from server and updating in each child app
 
 This project simplifies and standardizes the critical task of image metadata analysis for drone surveys, paving the way for improved operational efficiency and data quality.
 
