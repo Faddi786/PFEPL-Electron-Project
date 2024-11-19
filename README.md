@@ -47,35 +47,35 @@ Web-Based Dashboard (Planned for Version 2)
 ________________________________________
 Technical Details
 1.	Offline Functionality:
-•	Electron-based apps operate offline, ensuring compatibility with local file systems for direct access to images.
+    •	Electron-based apps operate offline, ensuring compatibility with local file systems for direct access to images.
 2.	Two-Level Architecture:
-•	Parent App: Generates child app installers and manages pilot accounts.
-•	Child App: Installed by pilots for analyzing images on their local systems.
+    •	Parent App: Generates child app installers and manages pilot accounts.
+    •	Child App: Installed by pilots for analyzing images on their local systems.
 3.	Image Metadata Analysis:
-•	Extracts metadata such as ISO, shutter speed, aperture, etc.
-•	Compares values against predefined standards to determine pass/fail status.
+    •	Extracts metadata such as ISO, shutter speed, aperture, etc.
+    •	Compares values against predefined standards to determine pass/fail status.
 4.	Technology Stack:
-•	Electron Framework: JavaScript-based framework for cross-platform desktop apps.
-•	Python Backend: For metadata extraction and analysis.
-•	HTML/CSS/JS: For GUI development.
+    •	Electron Framework: JavaScript-based framework for cross-platform desktop apps.
+    •	Python Backend: For metadata extraction and analysis.
+    •	HTML/CSS/JS: For GUI development.
 ________________________________________
 Workflow
 
 1.	Parent App Workflow:
 
-•	Register pilot details.
+    •	Register pilot details.
 
-•	Generate child app installer.
+    •	Generate child app installer.
 
-•	Email the installer to pilots.
+    •	Email the installer to pilots.
 
-3.	Child App Workflow:
+2.	Child App Workflow:
 
-•	Login and input the folder path of drone survey images.
+    •	Login and input the folder path of drone survey images.
 
-•	Perform metadata analysis.
+    •	Perform metadata analysis.
 
-•	Generate:
+    •	Generate:
 
 PDF report for the pilot.
 
@@ -88,7 +88,8 @@ Back office statistics with sample images.
     •	View summary statistics, historical data, and sample images for each survey.
 ________________________________________
 Requirements
-•	Nothing
+•	Node.js
+•   Python and itspackages 
 ________________________________________
 Benefits
 
