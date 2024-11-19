@@ -15,14 +15,16 @@ To tackle this, we created an image metadata analysis tool that:
 2.	Verifies compliance with specified configuration values.
 3.	Generates a PDF report of the analysis.
 4.	Provides detailed statistics, including the number of pass/fail images, and shares sample images with the back office.
+   
 The tool operates as a two-level architecture:
 1.	Parent App: Used by drone department heads to create child apps for pilots.
 2.	Child App: Used by pilots for image analysis.
 Previously, only statistical summaries (pass/fail counts) were sent to managers and department heads. However, the drone department requested enhancements, Provide access to random samples of pass and fail images for each flight.
+
 ________________________________________
 Technical Details
    
-7.	Technology Stack:
+Technology Stack:
    
     •	Electron Framework: JavaScript-based framework for cross-platform desktop apps.
 
@@ -30,20 +32,22 @@ Technical Details
 
     •	HTML/CSS/JS: For GUI development.
 
-Requirements
-•	Node.js
-•   Python and itspackages 
+Requirements:
 
-  	
+Node.js
+
+Python and its packages 
+
 ________________________________________
-Workflow
+Features and Workflow
+
 Two-Level Architecture:
    
     •	Parent App: Generates child app installers and manages pilot accounts.
 
     •	Child App: Installed by pilots for analyzing images on their local systems.
 
-1.	Offline Functionality:
+Offline Functionality:
    
     •	Electron-based apps operate offline, ensuring compatibility with local file systems for direct access to images.
 
@@ -60,10 +64,10 @@ Two-Level Architecture:
     •	Login and input the folder path of drone survey images.
 
     •	Perform metadata analysis.
+  	
     •	Extracts metadata such as ISO, shutter speed, aperture, etc.
 
     •	Compares values against predefined standards to determine pass/fail status.
-
 
     •	Automatically generate PDF report for the pilot 
 
@@ -73,10 +77,11 @@ Two-Level Architecture:
 
     •	View summary statistics, historical data, and sample images for each survey.
 							
-•	Centralize and visualize data for the drone department team.
+    •	Centralize and visualize data for the drone department team.
 
-•	Improved Reporting: Interactive charts and graphs for better insights.
-•	Update drone camera configurations dynamically by requesting data from server and updating in each child app
+    •	Improved Reporting: Interactive charts and graphs for better insights.
+
+    •	Update drone camera configurations dynamically by requesting data from server and updating in each child app
 
 This project simplifies and standardizes the critical task of image metadata analysis for drone surveys, paving the way for improved operational efficiency and data quality.
 
