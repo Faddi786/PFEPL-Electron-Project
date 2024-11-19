@@ -43,13 +43,13 @@ Features and Workflow
 
 Two-Level Architecture:
    
-    •	Parent App: Generates child app installers and manages pilot accounts.
+• Parent App: Generates child app installers and manages pilot accounts.
 
-    •	Child App: Installed by pilots for analyzing images on their local systems.
+• Child App: Installed by pilots for analyzing images on their local systems.
 
 Offline Functionality:
    
-    •	Electron-based apps operate offline, ensuring compatibility with local file systems for direct access to images.
+• Electron-based apps operate offline, ensuring compatibility with local file systems for direct access to images.
 
 1.	Parent App Workflow:
 
