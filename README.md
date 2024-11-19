@@ -19,10 +19,9 @@ The tool operates as a two-level architecture:
 1.	Parent App: Used by drone department heads to create child apps for pilots.
 2.	Child App: Used by pilots for image analysis.
 Previously, only statistical summaries (pass/fail counts) were sent to managers and department heads. However, the drone department requested enhancements, Provide access to random samples of pass and fail images for each flight.
+
 To achieve this, the system consists of:
-
 •	Desktop Applications for image metadata analysis (offline functionality).
-
 •	A planned web-based platform to centralize and enhance data visualization and access.
 ________________________________________
 Features
